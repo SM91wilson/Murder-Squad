@@ -45,9 +45,11 @@ $(document).ready(function() {
           url: '/api/Notes/' + id
       })
   }
+  deleteNote();
 
   function postNote(noteData){
       $.post('/api/Notes', noteData)
         .then(getNote);
       }
+    postNote();
 });
