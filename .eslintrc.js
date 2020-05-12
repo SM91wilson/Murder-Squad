@@ -1,7 +1,9 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es6": true
+        "es6": true,
+        "node":true,
+        "amd":true
     },
     "extends": "eslint:recommended",
     "globals": {
@@ -13,5 +15,6 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+        "no-console": 0
     }
 };
