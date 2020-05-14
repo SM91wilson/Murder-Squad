@@ -1,6 +1,19 @@
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize) => {
     var Story = sequelize.define("Story", {
-       Stories: DataTypes.STRING,
-    });
+      //  Stories: DataTypes.STRING,
+    },{timestamps: false});
+
+    Story.associate = function(models) {
+        Story.belongsTo(models.Guests)
+      
+        Story.hasMany(models.Narrative,
+          {
+              foreignKey: {
+                allowNull: false,
+              },
+            });
+      };
+
     return Story;
 }
+
