@@ -6,8 +6,11 @@ let app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-require("./routes/api-routes.js")(app);
+var db = require("./models")
+require("./routes/apiroutes.js")(app);
 
+db.sequelize.sync({ force: true }).then(function() {
 app.listen(port, function() {
     console.log("listening on", port);
   });
+});

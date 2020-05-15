@@ -1,32 +1,38 @@
 $(document).ready(function() {
 
-  var suspects = [];
+  var Guests = [];
   var Clues = [];
   var Narrative = [];
   var Notes = [];
 
-  getSuspects();
+  getGuests();
   getClues();
   getNarrative();
   getNote();
 
-  function getSuspects() {
-    $.get("/api/Suspects", function(data) {
-      suspects = data;
-      return suspects;
+  function getGuests() {
+    $.get("/api/Guests", function(data) {
+      for(var i = 0; i < data.length; i++){
+      data[i].push(Guests)
+      }
+      return Guests;
     });
   }
 
   function getClues() {
-    $.get("/api/Clues", function(data) {
-      Clues = data;
+    $.get("/api/Clues/:id", function(data) {
+      for(var i = 0; i < data.length; i++){
+        data[i].push(Clues)
+        }
       return Clues;
     });
   }
 
   function getNarrative() {
-    $.get("/api/Narrative", function(data) {
-      Narrative = data;
+    $.get("/api/Narrative/:id", function(data) {
+      for(var i = 0; i < data.length; i++){
+        data[i].push(Narrative)
+        }
       return Narrative;
     });
   }
@@ -49,7 +55,7 @@ $(document).ready(function() {
 
   function postNote(noteData){
       $.post('/api/Notes', noteData)
-        .then(getNote);
+        // .then(getNote());
       }
     postNote();
-});
+})

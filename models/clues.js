@@ -1,20 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
-    var Clues = sequelize.define("Clues", {
-        character1clues: DataTypes.STRING,
-        character2clues: DataTypes.STRING,
-        character3clues: DataTypes.STRING,
-        narrative1: DataTypes.STRING,
-        narrative2: DataTypes.STRING,
-        narrative3: DataTypes.STRING
-    });
-    return Clues;
-}
+  var Clues = sequelize.define("Clues", {
+    clues: DataTypes.STRING,
+  },{timestamps: false});
 
-
-
-// narrative: [
-//             {
-//                 narrativeText:DataTypes.STRING,
-//                 narrativeId:DataTypes.INT
-//             }
-//         ],
+  Clues.associate = function(models) {
+    Clues.belongsTo(models.Guests);
+};
+    
+  
+  return Clues;
+};
