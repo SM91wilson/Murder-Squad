@@ -1,6 +1,6 @@
 const express = require("express");
 
-const port = process.env.port || 3030;
+const port = process.env.PORT || 3030;
 
 let app = express();
 app.use(express.urlencoded({ extended: true }));
