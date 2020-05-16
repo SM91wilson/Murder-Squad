@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+    body, html {
+        height: 100%;
+    }
+
+    /* .bg {
+        height: 100%;
+        background-image: url("https://c.pxhere.com/photos/c3/d8/accident_barrier_caution_caution_tape_crime_scene_danger_endanger_forensics-1553271.jpg!d");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    } */
+    .container {
+        border-radius: 15px;
+    }
+    #introPage {
+        background-color: rgba(238, 238, 238, 0.8);
+        text-align: center;
+        padding-top: 20px;
+        float: center;
+        height: 30%;
+        width: 50%;
+    }
+    #select {
+        background-color: rgba(238, 238, 238, 0.8);
+        text-align: center;
+        padding-top: 20px;
+        float: center;
+        height: 10%;
+        width: 50%;
+    }
+
+    #selectStorChar {
+        text-align: center;
+        padding-top: 20px;
+        float: center;
+        height: 35%;
+        width: 50%;
+    }
+
+    #storyCarousel, #charCarousel {
+        float: center;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    #greetings {
+        background-color: rgba(238, 238, 238, 0.8);
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        float: center;
+        height: 80%;
+        width: 50%;
+    }
+
+    .carousel {
+    display: inline-block !important;
+    margin-right: 40px;
+    margin-left: 40px;
+    }
+
+    .scroll {
+        overflow-y: scroll;
+        max-height: 400px;
+        text-align: justify;
+    }
+
+    .btn:hover {
+        cursor: url(./knife_icon_3_10.png), auto;
+    }
+
+    #gameBoard {
+        text-align: center;
+        margin-bottom: 200px;
+        background: repeating-linear-gradient(
+        45deg, #c4c5cef3,#c4c5cef3 10px,#888997f3 10px,#888997f3 20px
+        );
+    }
+
+    #top {
+        height: 400px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    #avatar {
+        border-radius: 50%;
+    }
+
+    #message {
+        height: 100%;
+        background-image: url("clipboard.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-top: 80px;
+        padding-left: 60px;
+    }
+
+    #btm {
+        height: 250px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .card {
+        height: 200px;
+    }
+
+    .btn-circle.btn-sm { 
+        width: 30px; 
+        height: 30px; 
+        padding: 0px 0px; 
+        border-radius: 15px; 
+        font-size: 20px; 
+        text-align: center; 
+        position: absolute;
+        top: 160px;
+        right: 10px;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 3%;
+        background-color: rgb(7, 8, 8);
+        color:gray;
+        text-align: center;
+    }
+
+    </style>
+
+    <title>Murder Squad</title>
+
+</head>
+<body>
+
+        <div class="container p-3 my-3 border shadow" id="introPage">
+            <div class="row">
+                <div class="col-lg-12"><h3> Welcome To Murder Squad</h3>
+                    <hr class="my-4">
+                    <p>Get together with friends (or solo!) to partake in America’s sixth favorite pastime: <br> the Murder Mystery Dinner.</p>
+                <a class="btn btn-warning btn-md" id="nextbtn" href="#" role="button" onclick="showCarousel()">Next</a>
+                </div>
+            </div>
+            <div class="row">
+                
+            </div>
+        </div>
+
+        <div class="container p-3 my-3 border shadow" id="select">
+            <div class="row">
+                <div class="col-lg-12"><h3> Select A Story & Character To Move Forward</h3></div>
+            </div>
+        </div>
+
+        <div class="container p-3 my-3" id="selectStorChar">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div id="storyCarousel" class="carousel slide w-75" data-ride="carousel" onclick="showChar()">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img class="center-block w-50" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-1">
+                              <p class= "text-muted">Story 1</p>
+                            </div>
+                            <div class="carousel-item">
+                              <img class="center-block w-50" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-2">
+                              <p class= "text-muted">Story 2</p>
+                            </div>
+                            <div class="carousel-item">
+                              <img class="center-block w-50" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-3">
+                              <p class= "text-muted">Story 3</p>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#storyCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#storyCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="charCarousel" class="carousel slide w-75" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="center-block w-50" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-1">
+                                <p class= "text-muted">Character 1</p>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="center-block w-50" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-2">
+                                <p class= "text-muted">Character 2</p>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="center-block w-50" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-3">
+                                <p class= "text-muted">Character 3</p>
+                            </div>
+                            </div>
+                        <a class="carousel-control-prev" href="#charCarousel" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#charCarousel" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                </div>
+            </div>
+            <p class="lead"><button type="button" class="btn btn-warning btn-md" id="storybtn" href="#" onclick="showStory()"> Next </button></p>
+        </div>
+
+        <div class="container p-3 my-3 border shadow" id="greetings">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="display-7">Hello Ladies and Gentlemen ... </h3>
+                    <hr class="my-4">
+                    <p class= "scroll">Thank you for all meeting me here over this suspiciously all-expenses paid dinner to discuss an undisclosed matter. Some of you do not yet know who I am. I’m a new detective on the force, fresh faced and just out of the academy. <br> <br>
+                    My name is Detective Ross. I regret to inform you that I have no bedside manner. And, your studio executive, Roland D. Dice, known for taking huge gambles and winning big in this motion picture roulette, is dead.
+ 
+                    How did he die? That’s what I’d like to know! However, I’ll need some help. The four of you here with me all have air-tight alibis, so I know I can trust you. Or so I think… <br> <br> 
+                    Unfortunately, I’m not very good at this yet, so I’ll be depending on you all.
+                     
+                    As we have dinner tonight, there will be three courses and three chances for you all to speak up. I’m still getting evidence brought to me, so I’ll share it with you as it becomes available. Each round (of food), you will all have relevant pieces of information to share, which will, by sorcery I presume, appear on your clue cards. As with all clues, some are crucial and relevant, and some may be red herrings. <br> <br>
+                    On our message board, share what you know. Please – be honest. I’m trusting you not to withhold or change anything. While that might be fun for you, it’s not fun for anyone else as we might miss something crucial, we might not catch the killer AND YOU COULD BE NEXT. (So really – share exactly what’s really on your clue card ;) )
+                     
+                    Once dinner is finished, I intend to have this whole thing solved! After all the courses have come out and we’ve gotten as much information as we can, I’ll ask for your accusation. The murderer will be someone we’ve heard about… or know… <br> <br>
+                    As you know. Roland D. Dice was found dead two days ago. At first it appeared to be suicide, but there was no apparent cause of death.. He was found face down at his desk. I’ve already taken the liberty of assembling a list of suspects being that they’re the only ones without solid alibis – or because I don’t like them ...
+                    </p>
+
+                    <p class="lead">
+                        <a class="btn btn-warning btn-md" id="nextbtn" href="#" role="button" onclick="start()">Start</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container my-3 border" id="gameBoard">
+        
+        <div class="row" id="header">
+            <div class="col-lg-12 mt-4">
+            <h2 class="text-white"> Murder Squad </h2>
+            </div>
+        </div>
+
+        <div class="row" id="top">
+            <div class="col-lg-2">
+                <div id="avatar" class="text-white">
+                    <p class="border">Char 1</p>
+                    <p class="border">Char 2</p>
+                    <p class="border">Char 3</p>
+                    <p class="border">Char 4</p>
+                </div>
+            </div>
+            <div class="col-lg-6 text-white">
+                <br>
+                <p> Fun Stuff In Here </p>
+            </div>
+            <div class="col-lg-4" id="message">
+                <ul>
+                    <li class="mb"></li>
+                    <li class="mb"></li>
+                    <li class="mb"></li>
+                    <li class="mb"></li>
+                    <li class="mb"></li>
+                    <li class="mb"></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row pt-4 pb-4" id="btm">
+            <div class="col-lg-2">
+                <div class="card">
+                    <div class="container">
+                        <br>
+                      <h6>Clue Cards </h6>
+                      <p class="clue"></p>
+                      <button type= "button" class="btn btn-success btn-sm btn-circle" id="addBtn" href="#" r> + </button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="container">
+                    <br>
+                      <h6>Additional Story Text (?)</h6>
+                      <p class="addText"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="container">
+                    <br>
+                      <h6>Score Card</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+<div class="footer">
+    <p> NSDM Inc. 2020 (C) </p>
+</div>
+    
+</body>
+
+<script>
+
+var hidePage = document.getElementById("gameBoard");
+hidePage.style.display = "none";
+var hidePage = document.getElementById("select");
+hidePage.style.display = "none";
+var hidePage = document.getElementById("selectStorChar");
+hidePage.style.display = "none";
+var hidePage = document.getElementById("greetings");
+hidePage.style.display = "none";
+
+function showCarousel() {
+
+    var greetings = document.getElementById("greetings");
+    greetings.style.display = "none";
+
+    var startGame = document.getElementById("gameBoard");
+    startGame.style.display = "none";
+
+    var nextBtn = document.getElementById("nextbtn");
+    nextBtn.style.display = "none";
+
+    var select = document.getElementById("select");
+    select.style.display = "block";
+
+    var storChar = document.getElementById("selectStorChar");
+    storChar.style.display = "block";
+}
+
+function showChar() {
+    var showChar = document.getElementById("charCarousel");
+    showStory.style.display = "block";
+}
+
+function showStory() {
+
+    var intro = document.getElementById("introPage");
+    intro.style.display = "none";
+
+    var startGame = document.getElementById("gameBoard");
+    startGame.style.display = "none";
+
+    var select = document.getElementById("select");
+    select.style.display = "none";
+
+    var storChar = document.getElementById("selectStorChar");
+    storChar.style.display = "none";
+
+    var greetings = document.getElementById("greetings");
+    greetings.style.display = "block";
+}
+
+function start() {
+
+    var greetings = document.getElementById("greetings");
+    greetings.style.display = "none";
+
+    var startGame = document.getElementById("gameBoard");
+    startGame.style.display = "block";
+
+}
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</html>
