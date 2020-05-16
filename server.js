@@ -11,7 +11,7 @@ var db = require("./models")
 require("./routes/apiroutes.js")(app);
 require("./routes/htmlroute.js")(app);
 
-db.sequelize.sync({}).then(function() {
+db.sequelize.sync({force: true}).then(function() {
 app.listen(port, function() {
     console.log("listening on", port);
   });
