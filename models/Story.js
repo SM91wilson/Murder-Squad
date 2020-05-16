@@ -1,6 +1,6 @@
-module.exports = (sequelize) => {
+module.exports = (sequelize, DataTypes) => {
     var Story = sequelize.define("Story", {
-      //  Stories: DataTypes.STRING,
+       Stories: DataTypes.STRING,
     },{timestamps: false});
 
     Story.associate = function(models) {

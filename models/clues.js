@@ -1,6 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   var Clues = sequelize.define("Clues", {
-    clues: DataTypes.STRING,
+    clues: DataTypes.TEXT
+    
   },{timestamps: false});
 
   Clues.associate = function(models) {
