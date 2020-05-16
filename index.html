@@ -80,7 +80,7 @@
             <p class="lead">Select A Character & Story To Move Forward</p>
             <hr class="my-4">
             <div id="characterCarousel" class="carousel slide w-25" data-ride="carousel">
-                <div class="carousel-inner">
+                <div class="carousel-inner characterSelect">
                 <div class="carousel-item active">
                     <img class="center-block w-50 guest1" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-1">
                     <p class="guest1name"></p>
@@ -163,9 +163,6 @@
 </body>
 
 <script>
-$('.guest1name').text($(Guests[0].val()));
-$('.guest2name').text($(Guests[1].val()));
-$('.guest3name').text($(Guests[2].val()));
 
 var hidePage = document.getElementById("page2");
 hidePage.style.display = "none";
@@ -200,9 +197,12 @@ start();
 
 </script>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<script src="public/gamePage.js"></script>
+<script src="/gamePage.js"></script>
+<script src="/intro.js"></script>
 
 </html>

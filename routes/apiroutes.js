@@ -13,11 +13,11 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/Clues/:id", function(req, res) {
-    db.Clues.findOne({
-      where: {
-        guestsid: req.params.id,
-      },
+  app.get("/api/Clues", function(req, res) {
+    db.Clues.findAll({
+      // where: {
+      //   Guestid: req.params.id,
+      // },
     }).then(function(dbClues) {
       res.json(dbClues);
     });
