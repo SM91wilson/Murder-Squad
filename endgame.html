@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murder Squad Endgame</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cc6c724277.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+   <div class="container justify-content-center" id="accusationBox" style="display: block;">
+       <div class="row justify-content-center">
+           <div class="col-md-6">
+                Well, that was incredibly informative. Almost like a painting, and boy did it paint a clear picture for me. I think I know who to accuse, but who do you think it is? 
+                <br>
+                <br>
+                Choose carefully.
+           </div>
+       </div>
+       <div class="row justify-content-center">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Evilynn Shadows</li>
+                <li class="list-group-item">Crush Dice</li>
+                <li class="list-group-item">Andy N. Foote</li>
+                <li class="list-group-item">The new Secretary</li>
+                <li class="list-group-item">The Janitor</li>
+                <li class="list-group-item">Mary St. Pope</li>
+                <li class="list-group-item">Earnest Frank</li>
+                <li class="list-group-item">Vinnie Vici</li>
+                <li class="list-group-item">Samantha Peterson</li>
+                <li class="list-group-item">Detective Ross</li>
+        
+            <!-- <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">Evilynn Shadows</label>
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">Bruce “Crush” Dice</label>
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                    <label class="form-check-label" for="defaultCheck3">Andy N. Foote</label>
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+                    <label class="form-check-label" for="defaultCheck4">The new Secretary</label>
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+                    <label class="form-check-label" for="defaultCheck5">The Janitor</label>
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+                    <label class="form-check-label" for="defaultCheck6">Mary St. Pope</label>
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+                    <label class="form-check-label" for="defaultCheck7">Earnest Frank</label>
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+                    <label class="form-check-label" for="defaultCheck8">Vinnie Vici</label>
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+                    <label class="form-check-label" for="defaultCheck9">Samantha Peterson</label>
+                </li>
+                <li class="list-group-item">
+                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+                    <label class="form-check-label" for="defaultCheck10">Detective Ross</label>
+                </li>
+            </ul> -->
+       </div>
+       <div class="row justify-content-center" style="padding: 30px; display: none;" id="finalGuessField">
+            <span id="yourGuess"></span>
+            <br>
+            <br>
+            <button id="submitBtn">Click to submit your accusation</button>
+        </div>
+    </div>
+   
+    <div class="container justify-content-center" id="whoDunnit" style="display: none;">
+       <div class="row" id="rightOrWrong"></div>
+       <div class="row">
+            <div class="col-md-6">
+                <p>
+                    We caught up to Evilynn, presented her with an accusation and the evidence, and she caved! You see: She was late to dinner with Vinnie, leaving her unaccounted for at 7:00, after studio hours. She and Roland had also had a tryst over the years, but he had her heart. She couldn’t bear being both left out of this picture, being past her starlet prime, passing her up for Mary St. Pope. And - it drove her to madness. You see, the note telling him to meet her was written on a page of an herbology book with a page of flowers used in perfumes – giving away her secret – that White Oleander oil, while smelling beautiful, is poisonous if ingested. Knowing that she made her own perfume, she would have had access to these things. Since Vinnie was over an hour late to dinner, he hadn’t noticed that she arrived late as well. She had gone to the studio, came in for a private meeting in his office – their usual tryst meeting spot – confronted him and tried to blackmail him into putting her into the will to get what she felt she deserved – a studio built on her obsolete work through the years of silent films. Since he wouldn’t, that was the last straw. She poisoned him, and left.
+                    <br>
+                    <br>
+                    And with that, enjoy the studio now under control of Crush. I think I’ll get out of the detecting game. I’ll have to find a new skill to make me a household name – this isn’t the end for Former Detective Bob Ross!
+                </p>
+            </div>
+        </div>
+
+
+
+        
+    </div>
+    
+<script src='endgamejs.js'></script>
+
+</body>
+</html>
