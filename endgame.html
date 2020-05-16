@@ -5,12 +5,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murder Squad Endgame</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
     <script src="https://kit.fontawesome.com/cc6c724277.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body, html {
+            height: 100%;
+            background: repeating-linear-gradient(
+            90deg, #c4c5cef3,#c4c5cef3 10px,#888997f3 10px,#888997f3 20px
+        );
+        }
+    
+        /* .bg {
+            height: 100%;
+            background-image: url("https://c.pxhere.com/photos/c3/d8/accident_barrier_caution_caution_tape_crime_scene_danger_endanger_forensics-1553271.jpg!d");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        } */
+        .container {
+            border-radius: 15px;
+        }
+        #introPage {
+            background-color: rgba(238, 238, 238, 0.8);
+            text-align: center;
+            padding-top: 20px;
+            float: center;
+            height: 30%;
+            width: 50%;
+        }
+
+        #whoDunnit{
+            background-color: rgba(238, 238, 238, 0.8);
+            text-align: center;
+            padding-top: 20px;
+            float: center;
+            height: 80%;
+            width: 50%;
+            font-family: "Titillium Web";
+        }
+        #greetings {
+                    background-color: rgba(238, 238, 238, 0.8);
+                    text-align: center;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    float: center;
+                    height: 80%;
+                    width: 50%;
+                }
+            
+        #accusationBox{
+            font-family: "Titillium Web";
+            background-color: white;
+        }
+
+
+        #select {
+            background-color: rgba(238, 238, 238, 0.8);
+            text-align: center;
+            padding-top: 20px;
+            float: center;
+            height: 10%;
+            width: 50%;
+        }
+    
+        #selectStorChar {
+            text-align: center;
+            padding-top: 20px;
+            float: center;
+            height: 35%;
+            width: 50%;
+        }
+    
+        #storyCarousel, #charCarousel {
+            float: center;
+            text-align: center;
+            padding-top: 20px;
+        }
+    
+       
+        .carousel {
+        display: inline-block !important;
+        margin-right: 40px;
+        margin-left: 40px;
+        }
+    
+        .scroll {
+            overflow-y: scroll;
+            max-height: 400px;
+            text-align: justify;
+        }
+    
+        .list-group-item:hover {
+            cursor: url(./knife_icon_3_10.png), auto;
+        }
+    
+        #gameBoard {
+            text-align: center;
+            margin-bottom: 200px;
+            background: repeating-linear-gradient(
+            45deg, #c4c5cef3,#c4c5cef3 10px,#888997f3 10px,#888997f3 20px
+            );
+        }
+    
+        #top {
+            height: 400px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    
+        #avatar {
+            border-radius: 50%;
+        }
+    
+        #message {
+            height: 100%;
+            background-image: url("clipboard.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            padding-top: 80px;
+            padding-left: 60px;
+        }
+    
+        #btm {
+            height: 250px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    
+        .card {
+            height: 200px;
+        }
+    
+        .btn-circle.btn-sm { 
+            width: 30px; 
+            height: 30px; 
+            padding: 0px 0px; 
+            border-radius: 15px; 
+            font-size: 20px; 
+            text-align: center; 
+            position: absolute;
+            top: 160px;
+            right: 10px;
+        }
+    
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 3%;
+            background-color: rgb(7, 8, 8);
+            color:gray;
+            text-align: center;
+        }
+    
+        </style>
 </head>
 <body>
-   <div class="container justify-content-center" id="accusationBox" style="display: block;">
+   <div class="container justify-content-center p-3 my-3 border shadow" id="accusationBox" style="display: block;">
        <div class="row justify-content-center">
            <div class="col-md-6">
                 Well, that was incredibly informative. Almost like a painting, and boy did it paint a clear picture for me. I think I know who to accuse, but who do you think it is? 
@@ -31,62 +185,25 @@
                 <li class="list-group-item">Vinnie Vici</li>
                 <li class="list-group-item">Samantha Peterson</li>
                 <li class="list-group-item">Detective Ross</li>
-        
-            <!-- <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                    <label class="form-check-label" for="defaultCheck1">Evilynn Shadows</label>
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-                    <label class="form-check-label" for="defaultCheck2">Bruce “Crush” Dice</label>
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-                    <label class="form-check-label" for="defaultCheck3">Andy N. Foote</label>
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-                    <label class="form-check-label" for="defaultCheck4">The new Secretary</label>
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-                    <label class="form-check-label" for="defaultCheck5">The Janitor</label>
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
-                    <label class="form-check-label" for="defaultCheck6">Mary St. Pope</label>
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
-                    <label class="form-check-label" for="defaultCheck7">Earnest Frank</label>
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
-                    <label class="form-check-label" for="defaultCheck8">Vinnie Vici</label>
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
-                    <label class="form-check-label" for="defaultCheck9">Samantha Peterson</label>
-                </li>
-                <li class="list-group-item">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
-                    <label class="form-check-label" for="defaultCheck10">Detective Ross</label>
-                </li>
-            </ul> -->
        </div>
-       <div class="row justify-content-center" style="padding: 30px; display: none;" id="finalGuessField">
-            <span id="yourGuess"></span>
-            <br>
-            <br>
-            <button id="submitBtn">Click to submit your accusation</button>
+       <div class="row justify-content-center" style="padding-bottom: 30px; display: none;" id="finalGuessField">
+            <hr class="my-4" style="padding-top: 0px;">
+            <div class="row justify-content-center">
+                <div class="col-m-6">
+                    <span id="yourGuess"></span>
+                    <br>
+                    <br>
+                    <button class="btn btn-warning btn-md" id="submitBtn">Click to submit your accusation</button>
+                </div>
+            </div>
         </div>
     </div>
    
-    <div class="container justify-content-center" id="whoDunnit" style="display: none;">
-       <div class="row" id="rightOrWrong"></div>
-       <div class="row">
-            <div class="col-md-6">
+    <div class="container p-3 my-3 border shadow scroll" id="whoDunnit" style="display: none;">
+       <div class="row justify-content-center" id="rightOrWrong" style="font-size:x-large;"></div>
+       <hr class="my-7">
+       <div class="row justify-content-center">
+            <div class="col-lg-12">
                 <p>
                     We caught up to Evilynn, presented her with an accusation and the evidence, and she caved! You see: She was late to dinner with Vinnie, leaving her unaccounted for at 7:00, after studio hours. She and Roland had also had a tryst over the years, but he had her heart. She couldn’t bear being both left out of this picture, being past her starlet prime, passing her up for Mary St. Pope. And - it drove her to madness. You see, the note telling him to meet her was written on a page of an herbology book with a page of flowers used in perfumes – giving away her secret – that White Oleander oil, while smelling beautiful, is poisonous if ingested. Knowing that she made her own perfume, she would have had access to these things. Since Vinnie was over an hour late to dinner, he hadn’t noticed that she arrived late as well. She had gone to the studio, came in for a private meeting in his office – their usual tryst meeting spot – confronted him and tried to blackmail him into putting her into the will to get what she felt she deserved – a studio built on her obsolete work through the years of silent films. Since he wouldn’t, that was the last straw. She poisoned him, and left.
                     <br>
@@ -95,10 +212,9 @@
                 </p>
             </div>
         </div>
-
-
-
-        
+        <p>image of bob ross</p>
+        <br>
+        <button onclick = "document.location = 'indexv2.html'" class="btn btn-warning btn-md" id="playAgain">Play again?</button>
     </div>
     
 <script src='endgamejs.js'></script>
