@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "uae86zfg1prxoc55",
-    "password": "gaijda7ofsqkr8u9",
-    "database": "gqitapiuci8a2308",
-    "host": "qn66usrj1lwdk1cc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "Gustavo11012015",
+    "database": "murderparty_db",
+    "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
   },

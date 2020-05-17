@@ -3,14 +3,20 @@ $(document).ready(function() {
   const Clues = [];
   const Narrative = [];
   const Notes = [];
+  const Stories = [];
   var charClues = [];
+  var otherCharClu = [];
+  var roundCount = 0;
 
   getGuests();
   getClues();
   getNarrative();
+  getStories();
   getNote();
   console.log(Guests);
   console.log(Clues);
+  console.log(Stories);
+  console.log(Narrative);
 
   $(".carousel-item").on("click", function() {
     const chosenGuest = $(this)
@@ -21,35 +27,90 @@ $(document).ready(function() {
         .text()
         .trim()
     );
+
     if (chosenGuest === "Mary St. Pope") {
       for (let i = 0; i < Clues.length; i++) {
         if (Clues[i].GuestId === 1) {
           charClues.push(Clues[i]);
-          console.log(charClues);
         }
       }
+      console.log(charClues)
+      otherCharClu = Clues.filter(function(e){
+        return e.GuestId !== 1;
+      })
+
     }else if(chosenGuest === 'Earnest Frank') {
       for (let i = 0; i < Clues.length; i++) {
         if (Clues[i].GuestId === 2) {
-          charClues.push(Clues[i]);
-          console.log(charClues);
+          charClues.push(Clues[i]); 
         }
       }
+      otherCharClu = Clues.filter(function(e){
+        return e.GuestId !== 2;
+      })
+
     }else { 
       for (let i = 0; i < Clues.length; i++) {
       if (Clues[i].GuestId === 3) {
-        charClues.push(Clues[i]);
-        console.log(charClues);
+        charClues.push(Clues[i]); 
       }
-    }}
+    }
+    otherCharClu = Clues.filter(function(e){
+      return e.GuestId !== 3;
+    })
+  }
   });
+
+  $(".start").on("click", function() {
+    console.log(roundCount);
+    clueAndNarr();
+    
+  });
+
+  $(".addClue").on("click", function() {
+    let boardClue = $("<li>").text(charClues[roundCount].clues);
+    $(boardClue).addClass("mb");
+    $(".messageBoard").append(boardClue);    
+      if(roundCount === 0){
+        var roundClue1 = $("<li>").text(otherCharClu[0].clues).addClass("mb");
+        var roundClue2 = $("<li>").text(otherCharClu[1].clues).addClass("mb");
+        var roundClue3 = $("<li>").text(otherCharClu[2].clues).addClass("mb");
+        $(".messageBoard").append(roundClue1, roundClue2, roundClue3);
+      }else if(roundCount === 1){
+        var roundClue4 = $("<li>").text(otherCharClu[3].clues).addClass("mb");
+        var roundClue5 = $("<li>").text(otherCharClu[4].clues).addClass("mb");
+        var roundClue6 = $("<li>").text(otherCharClu[5].clues).addClass("mb");
+        $(".messageBoard").append(roundClue4, roundClue5, roundClue6);
+      }else{
+        var roundClue7 = $("<li>").text(otherCharClu[6].clues).addClass("mb");
+        var roundClue8 = $("<li>").text(otherCharClu[7].clues).addClass("mb");
+        var roundClue9 = $("<li>").text(otherCharClu[8].clues).addClass("mb");
+        $(".messageBoard").append(roundClue7, roundClue8, roundClue9);
+      } 
+    
+    $(".clue").empty();
+    $(".nextRound").removeClass("d-none");
+  });
+
+  $(".nextRound").on("click", function() {
+    roundCount++;
+    clueAndNarr();
+    $(".nextRound").addClass("d-none");
+  });
+
+  function clueAndNarr() {
+    $(".clue").text(charClues[roundCount].clues);
+    $(".addText").text(Narrative[roundCount].narrative);
+  }
 
   function getGuests() {
     $.get("/api/Guests", function(data) {
-      console.log(data);
       JSON.stringify(data);
       for (var i = 0; i < data.length; i++) {
         Guests.push(data[i]);
+        var listChar = $("<li>").text(Guests[i].name);
+        $(listChar).addClass("border");
+        $("#avatar").append(listChar);
       }
 
       $(".guest1name").text(Guests[0].name);
@@ -70,12 +131,22 @@ $(document).ready(function() {
   }
 
   function getNarrative() {
-    $.get("/api/Narrative/:id", function(data) {
+    $.get("/api/Narrative", function(data) {
       for (var i = 0; i < data.length; i++) {
         Narrative.push(data[i]);
+        console.log(data);
       }
       return Narrative;
     });
+  }
+
+  function getStories(){
+    $.get("/api/Story", function(data){
+      for (var i = 0; i < data.length; i++){
+        Stories.push(data[i]);
+      }
+      return Stories;
+    })
   }
 
   function getNote() {
