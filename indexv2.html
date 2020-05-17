@@ -109,7 +109,7 @@
                     </div>
 
                     <p class="lead">
-                        <a class="btn btn-warning btn-md" id="nextbtn" href="#" role="button" onclick="start()">Start</a>
+                        <a class="start btn btn-warning btn-md" id="nextbtn" href="#" role="button" onclick="start()">Start</a>
                     </p>
                 </div>
             </div>
@@ -124,13 +124,9 @@
         </div>
 
         <div class="row" id="top">
-            <div class="col-lg-2 pt-4">
-                <div id="avatar" class="text-black">
-                    <p class="border bg-white guest1name">Char 1</p>
-                    <p class="border bg-white guest2name">Char 2</p>
-                    <p class="border bg-white guest3name">Char 3</p>
-                    <p class="border bg-white">Char 4</p>
-                </div>
+            <div class="col-lg-2">
+                <ul id="avatar" class="text-black">
+                </ul>
             </div>
             <div class="col-lg-6 text-white">
                 <br>
@@ -150,10 +146,8 @@
                     <div class="container">
                         <br>
                       <h6>Clue Cards </h6>
-                      <p class="clue"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus quasi delectus ab nam ipsum magni ipsam voluptas repudiandae quaerat obcaecati et ad provident minus possimus, eaque vero ex? Molestias?
-                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem, distinctio unde maxime aspernatur qui incidunt nulla veniam tempora, provident adipisci dolores aliquam vero optio, non beatae suscipit. Explicabo, dolorum!
-                      </p>
-                      <button type= "button" class="btn btn-success btn-sm btn-circle addClue" id="addClue" href="#"> + </button>
+                      <p class="clue"></p>
+                      <button type= "button" class="btn btn-success btn-sm btn-circle addClue" id="addBtn" href="#"> + </button>
                     </div>
                 </div>
 
@@ -162,16 +156,12 @@
                 <div class="card">
                     <div class="container narrative">
                     <br>
-                      <h6>Additional Story Text</h6>
-                      <p class="addText pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus quasi delectus ab nam ipsum magni ipsam voluptas repudiandae quaerat obcaecati et ad provident minus possimus, eaque vero ex? Molestias?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem, distinctio unde maxime aspernatur qui incidunt nulla veniam tempora, provident adipisci dolores aliquam vero optio, non beatae suscipit. Explicabo, dolorum!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, suscipit modi? Unde nihil repellendus minus. Nihil, deserunt similique fuga omnis odio facere! Itaque molestias magnam magni animi qui similique quasi.
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, qui laboriosam commodi, doloribus sunt corrupti nam quae accusantium, nemo harum sapiente eos veniam dolor! Ipsam odio sequi possimus fugit dolorem?</p>
-                      <button type= "button" class="btn btn-success btn-md nextRound d-none" id="nextRound" href="#"> Next Round </button>
+                      <h6>Additional Story Text (?)</h6>
+                      <p class="addText pb-3"></p>
+                      <button type= "button" id="nextRound" class="btn btn-success btn-md nextRound d-none" href="#"> + </button>
                     </div>
                 </div>
             </div>
-
         </div>
 
         </div>
@@ -248,6 +238,4 @@ function start() {
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="/gamePage.js"></script>
-<script src="/intro.js"></script>
-
 </html>

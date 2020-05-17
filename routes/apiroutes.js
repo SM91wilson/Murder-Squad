@@ -14,38 +14,14 @@ module.exports = function(app) {
   });
 
   app.get("/api/Clues", function(req, res) {
-    db.Clues.findAll({
-      // where: {
-      //   Guestid: req.params.id,
-      // },
-    }).then(function(dbClues) {
+    db.Clues.findAll({}).then(function(dbClues) {
       res.json(dbClues);
     });
   });
 
-  app.get("/api/Narrative/:id", function(req, res) {
-    db.Narrative.findOne({
-      where: {
-        storyid: req.params.id,
-      },
-    }).then(function(dbNarrative) {
+  app.get("/api/Narrative", function(req, res) {
+    db.Narrative.findAll({}).then(function(dbNarrative) {
       res.json(dbNarrative);
-    });
-  });
-
-  app.post("/api/Notes", function(req, res) {
-    db.Notes.create(req.body).then(function(dbNotes) {
-      res.json(dbNotes);
-    });
-  });
-
-  app.delete("/api/Notes/:id", function(req, res) {
-    db.Notes.destroy({
-      where: {
-        id: res.params.id,
-      },
-    }).then(function(dbNotes) {
-      res.json(dbNotes);
     });
   });
 };
