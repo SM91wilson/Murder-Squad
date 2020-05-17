@@ -1,5 +1,6 @@
 body, html {
     height: 100%;
+    font-family: "Titillium Web";
 }
 
 /* .bg {
@@ -47,6 +48,16 @@ body, html {
     padding-top: 20px;
 }
 
+#whoDunnit{
+    background-color: rgba(238, 238, 238, 0.8);
+    text-align: center;
+    padding-top: 20px;
+    float: center;
+    height: 80%;
+    width: 50%;
+    font-family: "Titillium Web";
+}
+
 #greetings {
     background-color: rgba(238, 238, 238, 0.8);
     text-align: center;
@@ -71,6 +82,13 @@ margin-left: 40px;
 
 .btn:hover {
     cursor: url(./knife_icon_3_10.png), auto;
+}
+
+.list-group-item:hover {
+    cursor: url(./knife_icon_3_10.png), auto;
+}
+.list-group-item{
+    background-color: rgba(238, 238, 238, 0.25);
 }
 
 #gameBoard {
@@ -142,5 +160,12 @@ margin-left: 40px;
     background-color: rgb(7, 8, 8);
     color:gray;
     text-align: center;
+}
+
+
+#accusationBox{
+    font-family: "Titillium Web";
+    background-color:  rgba(238, 238, 238, 0.8);
+    width: 50%;
 }
 
