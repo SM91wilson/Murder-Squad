@@ -114,7 +114,7 @@ $(document).ready(function() {
       for (var i = 0; i < data.length; i++) {
         Guests.push(data[i]);
         var listChar = $("<li>").text(Guests[i].name);
-        $(listChar).addClass("border");
+        $(listChar).addClass("border bg-white");
         $("#avatar").append(listChar);
       }
 
