@@ -5,7 +5,18 @@
 //            <!-- if you got wrong answer: -->
 //            <!-- Close, but no cigar. Here’s what happened: -->
 
+// function to apply if you got it right or got it wrong.
 
+function revealOne(){
+  if ($("#yourGuess").text() === "Evilynn Shadows") {
+    console.log("yes");
+    $("#rightOrWrong").append("<div>").text("You’re correct! Your brilliant work helped me piece this mystery together. Here's what happened:");
+  }
+  else {
+    console.log("no");
+    $("#rightOrWrong").html("Close, but no cigar. Here’s what happened:");
+  }
+}
 
 
 // function to reveal the div containing the end of game text
@@ -16,17 +27,18 @@ function revealTwo() {
       x.style.display = "block";
       y.style.display = "none";
     } else {
-      x.style.display = "none";
+      x.style.display = "block";
+      y.style.display = "none";
     }
   }
 // 
 
 function finalGuess() {
-  var x = document.getElementById("finalGuessField");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+  var z = document.getElementById("finalGuessField");
+  if (z.style.display === "none") {
+    z.style.display = "block";
   } else {
-    x.style.display = "none";
+    z.style.display = "block";
   }
 }
 
@@ -36,8 +48,8 @@ function finalGuess() {
 // 
 
 $(".list-group-item").click(function() {
-  var x = document.getElementById("finalGuessField");
-  if (x.style.display === "none") {
+  var w = document.getElementById("finalGuessField");
+  if (w.style.display === "none") {
     $("#yourGuess").html(this.innerHTML);
     finalGuess();
     $("#submitBtn").click(function(){
@@ -49,24 +61,13 @@ $(".list-group-item").click(function() {
   else {
     $("#yourGuess").html(this.innerHTML);
     $("#submitBtn").click(function(){
-      console.log("submitted");
+      console.log("submitted too");
       revealOne();
       revealTwo();
     });
   }
 });
-// function to apply if you got it right or got it wrong.
 
-function revealOne(){
-  if ($("#yourGuess").text() === "Evilynn Shadows") {
-    console.log("yes");
-    $("#rightOrWrong").append("<div>").text("You’re correct! Your brilliant work helped me piece this mystery together.");
-  }
-  else {
-    console.log("no");
-    $("#rightOrWrong").html("Close, but no cigar. Here’s what happened:");
-  }
-}
 
 
 
