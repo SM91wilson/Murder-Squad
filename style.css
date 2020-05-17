@@ -1,0 +1,146 @@
+body, html {
+    height: 100%;
+}
+
+/* .bg {
+    height: 100%;
+    background-image: url("https://c.pxhere.com/photos/c3/d8/accident_barrier_caution_caution_tape_crime_scene_danger_endanger_forensics-1553271.jpg!d");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+.container {
+    border-radius: 15px;
+}
+#introPage {
+    background-color: rgba(238, 238, 238, 0.8);
+    text-align: center;
+    padding-top: 20px;
+    float: center;
+    height: 30%;
+    width: 50%;
+}
+#select {
+    background-color: rgba(238, 238, 238, 0.8);
+    text-align: center;
+    padding-top: 20px;
+    float: center;
+    height: 10%;
+    width: 50%;
+}
+
+#selectStorChar {
+    text-align: center;
+    padding-top: 20px;
+    float: center;
+    height: 35%;
+    width: 50%;
+}
+
+.list-group {
+    font-size: 10px;
+}
+
+#storyCarousel, #charCarousel {
+    float: center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#greetings {
+    background-color: rgba(238, 238, 238, 0.8);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: center;
+    height: 80%;
+    width: 50%;
+}
+
+.carousel {
+display: inline-block !important;
+margin-right: 40px;
+margin-left: 40px;
+}
+
+.scroll {
+    overflow-y: scroll;
+    max-height: 400px;
+    text-align: justify;
+}
+
+.btn:hover {
+    cursor: url(./knife_icon_3_10.png), auto;
+}
+
+#gameBoard {
+    text-align: center;
+    margin-bottom: 200px;
+    background: repeating-linear-gradient(
+    45deg, #c4c5cef3,#c4c5cef3 10px,#888997f3 10px,#888997f3 20px
+    );
+}
+
+#top {
+    height: 400px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#avatar {
+    border-radius: 50%;
+}
+
+#message {
+    height: 100%;
+    background-image: url("clipboard.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 80px;
+    padding-left: 60px;
+}
+
+#btm {
+    height: 250px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+.card {
+    height: 200px;
+    overflow: scroll;
+    font-size: 12px;
+}
+
+.btn-circle.btn-sm { 
+    width: 30px; 
+    height: 30px; 
+    padding: 0px 0px; 
+    border-radius: 50%; 
+    font-size: 15px; 
+    text-align: center; 
+    position: relative;
+    bottom: 10px;
+}
+
+#nextRound { 
+    border-radius: 50%; 
+    font-size: 15px; 
+    text-align: center; 
+    position: relative;
+    bottom: 10px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3%;
+    background-color: rgb(7, 8, 8);
+    color:gray;
+    text-align: center;
+}
+
