@@ -2,6 +2,11 @@ body, html {
     height: 100%;
 }
 
+
+body:hover {
+    cursor: url(./assets/knife_icon_3_10.png), auto;
+}
+
 /* .bg {
     height: 100%;
     background-image: url("https://c.pxhere.com/photos/c3/d8/accident_barrier_caution_caution_tape_crime_scene_danger_endanger_forensics-1553271.jpg!d");
@@ -69,10 +74,6 @@ margin-left: 40px;
     text-align: justify;
 }
 
-.btn:hover {
-    cursor: url(./knife_icon_3_10.png), auto;
-}
-
 #gameBoard {
     text-align: center;
     margin-bottom: 200px;
@@ -93,7 +94,7 @@ margin-left: 40px;
 
 #message {
     height: 100%;
-    background-image: url("clipboard.png");
+    background-image: url("./assets/clipboard.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
