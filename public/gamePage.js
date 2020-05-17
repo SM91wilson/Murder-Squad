@@ -93,9 +93,14 @@ $(document).ready(function() {
   });
 
   $(".nextRound").on("click", function() {
+    console.log(roundCount);
+    if(roundCount === 3){
+      document.location = '/endgame';
+    }else{
     roundCount++;
     clueAndNarr();
     $(".nextRound").addClass("d-none");
+    }
   });
 
   function clueAndNarr() {
