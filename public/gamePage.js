@@ -2,7 +2,6 @@ $(document).ready(function() {
   const Guests = [];
   const Clues = [];
   const Narrative = [];
-  const Notes = [];
   const Stories = [];
   var charClues = [];
   var otherCharClu = [];
@@ -12,7 +11,6 @@ $(document).ready(function() {
   getClues();
   getNarrative();
   getStories();
-  getNote();
   console.log(Guests);
   console.log(Clues);
   console.log(Stories);
@@ -154,25 +152,4 @@ $(document).ready(function() {
     })
   }
 
-  function getNote() {
-    // $.get("/api/Notes", function(data) {
-      // Notes = data;
-      return Notes;
-    // });
-  }
-
-  function deleteNote() {
-    var id = $(this);
-    $.ajax({
-      method: "DELETE",
-      url: "/api/Notes/" + id,
-    });
-  }
-  deleteNote();
-
-  function postNote(noteData) {
-    $.post("/api/Notes", noteData);
-    // .then(getNote());
-  }
-  postNote();
 });
