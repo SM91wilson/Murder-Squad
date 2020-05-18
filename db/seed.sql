@@ -35,7 +35,7 @@ insert into Stories(Stories, GuestId)
     ('London, Today: Murder at the British Museum (Coming soon!)', 3),
     ('Early 2000’s Tech Startup Christmas Party: Murder in the (Profit) Margins (Coming soon!)', 4);
 
-insert into narratives (narrative, StoryId)
+insert into Narratives (narrative, StoryId)
 	values('Oh, look! Here comes the appetizers, with endless salad and breadsticks!
 Can any of you tell me anything about these folks?', 1),
 ('Thank you, I’m sure all of that will be very helpful. One thing that seemed odd as we searched his office were the contents of his trash can (which you see above). Since the custodial staff made sure to empty the trash at the end of the day, and he was found at his desk in the morning, the trash can should have been empty. However, there were a few things found inside: an empty bottle of ink, a note written in poor handwriting that reads: “Sir – let’s meet tonight. The usual spot for meetings will do. Tell no one. -C.”, a small amount of tobacco ash, and a piece of a page of a new copy of his will, as yet to be notarized. Please examine these closely.
