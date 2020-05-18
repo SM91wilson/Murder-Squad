@@ -41,7 +41,7 @@
                         <button type="button" class="list-group-item list-group-item-action">
                             Golden Age Hollywood
                         </button>
-                        <button type="button" class="list-group-item list-group-item-action">Modern Day NYC</button>
+                        <button type="button" class="list-group-item list-group-item-action disabled">Modern Day NYC <br> Coming Soon! </button>
                         <button type="button" class="list-group-item list-group-item-action disabled">British Countryside, 19th Century <br> (Coming soon!)</button>
                         <button type="button" class="list-group-item list-group-item-action disabled">1999, New Year’s Eve: Y2Kaper <br> (Coming soon!)</button>
                         <button type="button" class="list-group-item list-group-item-action disabled">London, Today: Murder at the British Museum <br> (Coming soon!)</button>
@@ -51,20 +51,20 @@
                     <div id="charCarousel" class="carousel slide w-75" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="center-block w-50 guest1" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-1">
-                                <p class="guest1name text-white">Char 1</p>
+                                <img class="center-block w-50 guest1" src="/assets/Mary-St-Pope.png" alt="Mary-St-Pope">
+                                <p class="guest1name text-white"></p>
                             </div>
                             <div class="carousel-item">
-                                <img class="center-block w-50 guest2" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-2">
-                                <p class="guest2name text-white">Char 2</p>
+                                <img class="center-block w-50 guest2"  src="/assets/Earnest-Frank.png" alt="Earnest-Frank">
+                                <p class="guest2name text-white"></p>
                             </div>
                             <div class="carousel-item">
-                                <img class="center-block w-50 guest3" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-3">
-                                <p class="guest3name text-white">Char 3</p>
+                                <img class="center-block w-50 guest3" src="/assets/Vinnie-Vici.png" alt="Vinnie-Vici">
+                                <p class="guest3name text-white"></p>
                             </div>
                             <div class="carousel-item">
-                                <img class="center-block w-50" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-4">
-                                <p class= "text-white">Char 4</p>
+                                <img class="center-block w-50 guest4" src="/assets/Samantha-Peterson.png" alt="Samantha-Peterson">
+                                <p class="guest4name text-white"></p>
                             </div>
                             </div>
                         <a class="carousel-control-prev" href="#charCarousel" role="button" data-slide="prev">
@@ -84,6 +84,7 @@
         <div class="container p-3 my-3 border shadow" id="greetings">
             <div class="row">
                 <div class="col-lg-12">
+                    <img src="/assets/Detective-Bob-Ross.png" style="float:right;height:100;">
                     <h3 class="display-7">Hello Ladies and Gentlemen ... </h3>
                     <hr class="my-4">
                     <div class="scroll">
@@ -100,7 +101,6 @@
                     As you know. Roland D. Dice was found dead two days ago. At first it appeared to be suicide, but there was no apparent cause of death.. He was found face down at his desk. I’ve already taken the liberty of assembling a list of suspects being that they’re the only ones without solid alibis – or because I don’t like them ...
                     </p>
                     </div>
-
                     <p class="lead">
                         <a class="start btn btn-warning btn-md" id="nextbtn" href="#" role="button" onclick="start()">Start</a>
                     </p>
@@ -133,12 +133,8 @@
 
             <div class="col-lg-4" id="message">
                 <div class="box">
-                <img class="messageBoard" src="./public/assets/Clipboard.png" width="550">
+                <img class="messageBoard" src="/assets/Clipboard.png" width="550">
                 <ul class="text" style="max-width:240px;overflow-y:scroll;height:260px;">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor veritatis eos voluptatem corporis maiores quod, aliquam ipsum adipisci reiciendis libero asperiores velit modi pariatur quos voluptatibus tenetur fugiat qui tempore?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae atque saepe necessitatibus eveniet alias soluta architecto labore rem pariatur. Ipsa suscipit eius assumenda similique inventore ipsam quae debitis nobis aut!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus in maiores, iure deleniti nihil atque exercitationem. Temporibus, laudantium! Aut molestias et magni officia, ipsum unde quasi iure consectetur fuga laboriosam?
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus mollitia dolore, natus nostrum hic similique quaerat sunt ad veniam exercitationem, tempore iure. Consequatur at sunt atque ullam, ut deserunt.
                 </ul>
                 </div>
             </div>
@@ -162,7 +158,7 @@
                     <br>
                       <h6>Additional Text</h6>
                       <p class="addText pb-3"></p>
-                      <button type= "button" id="nextRound" class="btn btn-success btn-md nextRound d-none" href="#"> Next Round </button>
+                      <button type= "button" id="nextRound" class="btn btn-success btn-md nextRound d-none" href="#" onclick="showEvidence()"> Next Round </button>
                     </div>
                 </div>
             </div>
@@ -236,6 +232,11 @@ function start() {
 
     var startGame = document.getElementById("gameBoard");
     startGame.style.display = "block";
+}
+
+function showEvidence() {
+    var evidence = document.getElementById("myImg");
+    evidence.style.display = "block"; 
 }
 
 var modal = document.getElementById("myModal");
