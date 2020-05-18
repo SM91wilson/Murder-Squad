@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  
   const Guests = [];
   const Clues = [];
   const Narrative = [];
@@ -47,7 +48,7 @@ $(document).ready(function() {
         return e.GuestId !== 2;
       })
 
-    }else { 
+    }else if(chosenGuest === 'Vinnie Vici'){ 
       for (let i = 0; i < Clues.length; i++) {
       if (Clues[i].GuestId === 3) {
         charClues.push(Clues[i]); 
@@ -55,6 +56,15 @@ $(document).ready(function() {
     }
     otherCharClu = Clues.filter(function(e){
       return e.GuestId !== 3;
+    })
+  }else {
+    for (let i = 0; i < Clues.length; i++) {
+      if (Clues[i].GuestId === 4) {
+        charClues.push(Clues[i]); 
+      }
+    }
+    otherCharClu = Clues.filter(function(e){
+      return e.GuestId !== 4;
     })
   }
   });
@@ -68,7 +78,7 @@ $(document).ready(function() {
   $(".addClue").on("click", function() {
     let boardClue = $("<li>").text(charClues[roundCount].clues);
     $(boardClue).addClass("mb");
-    $(".messageBoard").append(boardClue);    
+    $(".text").append(boardClue);    
       if(roundCount === 0){
         var roundClue1 = $("<li>").text(otherCharClu[0].clues).addClass("mb");
         var roundClue2 = $("<li>").text(otherCharClu[1].clues).addClass("mb");
@@ -119,6 +129,7 @@ $(document).ready(function() {
       $(".guest1name").text(Guests[0].name);
       $(".guest2name").text(Guests[1].name);
       $(".guest3name").text(Guests[2].name);
+      $(".guest4name").text(Guests[3].name);
 
       return Guests;
     });
