@@ -2,7 +2,6 @@ $(document).ready(function() {
   const Guests = [];
   const Clues = [];
   const Narrative = [];
-  const Notes = [];
   const Stories = [];
   var charClues = [];
   var otherCharClu = [];
@@ -12,7 +11,6 @@ $(document).ready(function() {
   getClues();
   getNarrative();
   getStories();
-  getNote();
   console.log(Guests);
   console.log(Clues);
   console.log(Stories);
@@ -93,9 +91,14 @@ $(document).ready(function() {
   });
 
   $(".nextRound").on("click", function() {
+    console.log(roundCount);
+    if(roundCount === 3){
+      document.location = '/endgame';
+    }else{
     roundCount++;
     clueAndNarr();
     $(".nextRound").addClass("d-none");
+    }
   });
 
   function clueAndNarr() {
@@ -109,7 +112,7 @@ $(document).ready(function() {
       for (var i = 0; i < data.length; i++) {
         Guests.push(data[i]);
         var listChar = $("<li>").text(Guests[i].name);
-        $(listChar).addClass("border");
+        $(listChar).addClass("border bg-white");
         $("#avatar").append(listChar);
       }
 
@@ -149,25 +152,4 @@ $(document).ready(function() {
     })
   }
 
-  function getNote() {
-    // $.get("/api/Notes", function(data) {
-      // Notes = data;
-      return Notes;
-    // });
-  }
-
-  function deleteNote() {
-    var id = $(this);
-    $.ajax({
-      method: "DELETE",
-      url: "/api/Notes/" + id,
-    });
-  }
-  deleteNote();
-
-  function postNote(noteData) {
-    $.post("/api/Notes", noteData);
-    // .then(getNote());
-  }
-  postNote();
 });
