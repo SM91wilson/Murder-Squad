@@ -83,17 +83,17 @@ $(document).ready(function() {
         var roundClue1 = $("<li>").text(otherCharClu[0].clues).addClass("mb");
         var roundClue2 = $("<li>").text(otherCharClu[1].clues).addClass("mb");
         var roundClue3 = $("<li>").text(otherCharClu[2].clues).addClass("mb");
-        $(".messageBoard").append(roundClue1, roundClue2, roundClue3);
+        $(".text").append(roundClue1, roundClue2, roundClue3);
       }else if(roundCount === 1){
         var roundClue4 = $("<li>").text(otherCharClu[3].clues).addClass("mb");
         var roundClue5 = $("<li>").text(otherCharClu[4].clues).addClass("mb");
         var roundClue6 = $("<li>").text(otherCharClu[5].clues).addClass("mb");
-        $(".messageBoard").append(roundClue4, roundClue5, roundClue6);
+        $(".text").append(roundClue4, roundClue5, roundClue6);
       }else{
         var roundClue7 = $("<li>").text(otherCharClu[6].clues).addClass("mb");
         var roundClue8 = $("<li>").text(otherCharClu[7].clues).addClass("mb");
         var roundClue9 = $("<li>").text(otherCharClu[8].clues).addClass("mb");
-        $(".messageBoard").append(roundClue7, roundClue8, roundClue9);
+        $(".text").append(roundClue7, roundClue8, roundClue9);
       } 
     
     $(".clue").empty();
