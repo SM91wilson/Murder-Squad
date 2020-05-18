@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web">
     <link rel="stylesheet" href="style.css">
 
     <title>Murder Squad</title>
@@ -12,22 +13,23 @@
 </head>
 <body>
 
-        <div class="container p-3 my-3 border shadow" id="introPage">
+        <div class="container header p-3 my-3 border shadow" id="introPage">
             <div class="row">
-                <div class="col-lg-12"><h3> Welcome To Murder Squad</h3>
-                    <hr class="my-4">
+                <div class="col-lg-12">
+                    <img class="header" src="./assets/The-Murder-Squad.png" style="width:100%">
                     <p>Get together with friends (or solo!) to partake in America’s sixth favorite pastime: <br> the Murder Mystery Dinner.</p>
-                <a class="btn btn-warning btn-md" id="nextbtn" href="#" role="button" onclick="showCarousel()">Next</a>
                 </div>
             </div>
             <div class="row">
-                
+                <div class="col-lg-12">
+                    <a class="btn btn-warning btn-md" id="nextbtn" href="#" role="button" onclick="showCarousel()">Next</a>
+                </div>
             </div>
         </div>
 
         <div class="container p-3 my-3 border shadow" id="select">
             <div class="row">
-                <div class="col-lg-12"><h3> Select A Story & Character To Move Forward</h3></div>
+                <div class="col-lg-12" style="width:100%;text-align:center;"><p> Select A Story & Character To Move Forward</p></div>
             </div>
         </div>
 
@@ -36,7 +38,7 @@
                 <div class="col-lg-6">
 
                     <div class="list-group">
-                        <button type="button" class="list-group-item list-group-item-action active">
+                        <button type="button" class="list-group-item list-group-item-action">
                             Golden Age Hollywood
                         </button>
                         <button type="button" class="list-group-item list-group-item-action">Modern Day NYC</button>
@@ -50,19 +52,19 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img class="center-block w-50 guest1" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-1">
-                                <p class="guest1name text-muted">Char 1</p>
+                                <p class="guest1name text-white">Char 1</p>
                             </div>
                             <div class="carousel-item">
                                 <img class="center-block w-50 guest2" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-2">
-                                <p class="guest2name text-muted">Char 2</p>
+                                <p class="guest2name text-white">Char 2</p>
                             </div>
                             <div class="carousel-item">
                                 <img class="center-block w-50 guest3" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-3">
-                                <p class="guest3name text-muted">Char 3</p>
+                                <p class="guest3name text-white">Char 3</p>
                             </div>
                             <div class="carousel-item">
                                 <img class="center-block w-50" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="Character-4">
-                                <p class= "text-muted">Char 4</p>
+                                <p class= "text-white">Char 4</p>
                             </div>
                             </div>
                         <a class="carousel-control-prev" href="#charCarousel" role="button" data-slide="prev">
@@ -100,51 +102,56 @@
                     </div>
 
                     <p class="lead">
-                        <a class="btn btn-warning btn-md" id="nextbtn" href="#" role="button" onclick="start()">Start</a>
+                        <a class="start btn btn-warning btn-md" id="nextbtn" href="#" role="button" onclick="start()">Start</a>
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="container my-3 border" id="gameBoard">
-        
-        <div class="row" id="header">
-            <div class="col-lg-12 mt-4">
-            <h2 class="text-black"> Murder Squad </h2>
+    <div class="bg"> 
+        <div class="container" id="gameBoard">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="header" style="text-align:center; position:static;"><img src="./assets/The-Murder-Squad.png" width="500" /></div>
             </div>
-        </div>
+        </div>     
 
         <div class="row" id="top">
-            <div class="col-lg-2 pt-4">
-                <div id="avatar" class="text-black">
-                    <p class="border bg-white guest1name">Char 1</p>
-                    <p class="border bg-white guest2name">Char 2</p>
-                    <p class="border bg-white guest3name">Char 3</p>
-                    <p class="border bg-white">Char 4</p>
-                </div>
-            </div>
-            <div class="col-lg-6 text-white">
-                <br>
-                <p> Fun Stuff In Here </p>
-            </div>
-            <div class="col-lg-4" id="message">
-                <ul class="messageBoard">
-        
+            <div class="col-lg-2">
+                <ul id="avatar" class="text-black">
                 </ul>
+            </div>
+            <div class="col-lg-6 pl-6">
+                <br>
+                <img id="myImg" src="./assets/Evidence.JPG" alt="Evidence-1" style="width:300%;max-width:200px">
+                    <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption">Evidence</div>
+                    </div>
+            </div>
 
+            <div class="col-lg-4" id="message">
+                <div class="box">
+                <img class="messageBoard" src="./assets/Clipboard.png" width="550">
+                <ul class="text" style="max-width:240px;overflow-y:scroll;height:260px;">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor veritatis eos voluptatem corporis maiores quod, aliquam ipsum adipisci reiciendis libero asperiores velit modi pariatur quos voluptatibus tenetur fugiat qui tempore?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae atque saepe necessitatibus eveniet alias soluta architecto labore rem pariatur. Ipsa suscipit eius assumenda similique inventore ipsam quae debitis nobis aut!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus in maiores, iure deleniti nihil atque exercitationem. Temporibus, laudantium! Aut molestias et magni officia, ipsum unde quasi iure consectetur fuga laboriosam?
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui repellendus mollitia dolore, natus nostrum hic similique quaerat sunt ad veniam exercitationem, tempore iure. Consequatur at sunt atque ullam, ut deserunt.
+                </ul>
+                </div>
             </div>
         </div>
 
-        <div class="row pt-4 pb-4" id="btm">
+        <div class="row mt-3 mb-3" id="btm">
             <div class="col-lg-4">
                 <div class="card">
                     <div class="container">
                         <br>
                       <h6>Clue Cards </h6>
-                      <p class="clue"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus quasi delectus ab nam ipsum magni ipsam voluptas repudiandae quaerat obcaecati et ad provident minus possimus, eaque vero ex? Molestias?
-                          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem, distinctio unde maxime aspernatur qui incidunt nulla veniam tempora, provident adipisci dolores aliquam vero optio, non beatae suscipit. Explicabo, dolorum!
-                      </p>
-                      <button type= "button" class="btn btn-success btn-sm btn-circle addClue" id="addClue" href="#"> + </button>
+                      <p class="clue"></p>
+                      <button type= "button" class="btn btn-success btn-sm btn-circle addClue" id="addBtn" href="#"> + </button>
                     </div>
                 </div>
 
@@ -153,19 +160,16 @@
                 <div class="card">
                     <div class="container narrative">
                     <br>
-                      <h6>Additional Story Text</h6>
-                      <p class="addText pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut doloribus quasi delectus ab nam ipsum magni ipsam voluptas repudiandae quaerat obcaecati et ad provident minus possimus, eaque vero ex? Molestias?
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error exercitationem, distinctio unde maxime aspernatur qui incidunt nulla veniam tempora, provident adipisci dolores aliquam vero optio, non beatae suscipit. Explicabo, dolorum!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, suscipit modi? Unde nihil repellendus minus. Nihil, deserunt similique fuga omnis odio facere! Itaque molestias magnam magni animi qui similique quasi.
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, qui laboriosam commodi, doloribus sunt corrupti nam quae accusantium, nemo harum sapiente eos veniam dolor! Ipsam odio sequi possimus fugit dolorem?</p>
-                      <button type= "button" class="btn btn-success btn-md nextRound d-none" id="nextRound" href="#"> Next Round </button>
+                      <h6>Additional Text</h6>
+                      <p class="addText pb-3"></p>
+                      <button type= "button" id="nextRound" class="btn btn-success btn-md nextRound d-none" href="#"> Next Round </button>
                     </div>
                 </div>
             </div>
-
         </div>
+    </div>
 
-        </div>
+    </div>
 
 <div class="footer">
     <p> NSDM Inc. 2020 (C) </p>
@@ -233,12 +237,28 @@ function start() {
     var startGame = document.getElementById("gameBoard");
     startGame.style.display = "block";
 }
+
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="/gamePage.js"></script>
-<script src="/intro.js"></script>
-
 </html>

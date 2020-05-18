@@ -1,34 +1,44 @@
 body, html {
     height: 100%;
+    font-family: "Titillium Web";
+    background: repeating-linear-gradient(
+        90deg, #c4c5cef3,#c4c5cef3 10px,#888997f3 10px,#888997f3 20px
+    );
 }
-
 
 body:hover {
     cursor: url(./assets/knife_icon_3_10.png), auto;
 }
 
-/* .bg {
-    height: 100%;
-    background-image: url("https://c.pxhere.com/photos/c3/d8/accident_barrier_caution_caution_tape_crime_scene_danger_endanger_forensics-1553271.jpg!d");
+.bg {
+    background-image: url("./assets/bulletin.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
-} */
+    background-size: 85%;
+    padding-bottom: 0;
+}
+
+
 .container {
     border-radius: 15px;
 }
+
+.container.header {
+    background-color: white;
+}
+
 #introPage {
     background-color: rgba(238, 238, 238, 0.8);
     text-align: center;
     padding-top: 20px;
     float: center;
-    height: 30%;
+    height: 35%;
     width: 50%;
 }
 #select {
     background-color: rgba(238, 238, 238, 0.8);
     text-align: center;
-    padding-top: 20px;
+    margin-top: 20px;
     float: center;
     height: 10%;
     width: 50%;
@@ -36,7 +46,7 @@ body:hover {
 
 #selectStorChar {
     text-align: center;
-    padding-top: 20px;
+    margin-top: 20px;
     float: center;
     height: 35%;
     width: 50%;
@@ -46,10 +56,20 @@ body:hover {
     font-size: 10px;
 }
 
-#storyCarousel, #charCarousel {
+#charCarousel {
     float: center;
     text-align: center;
     padding-top: 20px;
+}
+
+#whoDunnit{
+    background-color: rgba(238, 238, 238, 0.8);
+    text-align: center;
+    padding-top: 20px;
+    float: center;
+    height: 80%;
+    width: 50%;
+    font-family: "Titillium Web";
 }
 
 #greetings {
@@ -68,18 +88,26 @@ margin-right: 40px;
 margin-left: 40px;
 }
 
+.btn:hover {
+    cursor: url(./assets/knife_icon_3_10.png), auto;
+}
+
+.list-group-item:hover {
+    cursor: url(./assets/knife_icon_3_10.png), auto;
+}
+.list-group-item{
+    background-color: rgba(238, 238, 238, 0.25);
+}
+
 .scroll {
     overflow-y: scroll;
     max-height: 400px;
     text-align: justify;
 }
 
+
 #gameBoard {
     text-align: center;
-    margin-bottom: 200px;
-    background: repeating-linear-gradient(
-    45deg, #c4c5cef3,#c4c5cef3 10px,#888997f3 10px,#888997f3 20px
-    );
 }
 
 #top {
@@ -92,20 +120,32 @@ margin-left: 40px;
     border-radius: 50%;
 }
 
+.box{
+    position: relative;
+    display: inline-block;  /* Make the width of box same as image */
+    bottom: 200px;
+}
+.box .text{
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 20px;
+    right: 0;        
+    text-align: left;
+    top: 28%; /* Adjust this value to move the positioned div up and down */
+    background: white;
+    font-family: "Titillium Web";
+    color:black;
+    width: 77%; /* Set the width of the positioned div */
+}
+
 #message {
-    height: 100%;
-    background-image: url("./assets/clipboard.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 80px;
-    padding-left: 60px;
+    right: 120px;
+    top: 100px;
 }
 
 #btm {
     height: 250px;
-    margin-right: 20px;
-    margin-left: 20px;
 }
 
 
@@ -145,3 +185,82 @@ margin-left: 40px;
     text-align: center;
 }
 
+
+#accusationBox{
+    font-family: "Titillium Web";
+    background-color:  rgba(238, 238, 238, 0.8);
+    width: 50%;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
