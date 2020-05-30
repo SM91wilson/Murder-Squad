@@ -11,6 +11,9 @@ var db = require("./models")
 require("./routes/apiroutes.js")(app);
 require("./routes/htmlroute.js")(app);
 
+var TextToSpeech = require('TextToSpeech')
+TextToSpeech.talk("hello")
+
 db.sequelize.sync({}).then(function() {
 app.listen(port, function() {
     console.log("listening on", port);
