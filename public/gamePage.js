@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  var TextToSpeech = require('TextToSpeech')
-TextToSpeech.talk("hello")
   
   const Guests = [];
   const Clues = [];
