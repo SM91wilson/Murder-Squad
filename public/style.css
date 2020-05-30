@@ -127,7 +127,7 @@ margin-left: 40px;
 }
 .box .text{
     position: absolute;
-    z-index: 999;
+    z-index: 998;
     margin: 0 auto;
     left: 20px;
     right: 0;        
@@ -203,7 +203,7 @@ margin-left: 40px;
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 999; /* Sit on top */
     padding-top: 100px; /* Location of the box */
     left: 0;
     top: 0;

@@ -130,7 +130,12 @@
             </div>
             <div class="col-lg-6 text-white">
                 <br>
-                <p> Fun Stuff In Here </p>
+                <img id="myImg" src="/assets/Evidence.jpg" alt="Evidence-1" style="width:300%;max-width:200px">
+                    <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption">Evidence</div>
+                    </div>
             </div>
             <div class="col-lg-4" id="message">
                 <ul class="messageBoard">
@@ -158,7 +163,7 @@
                     <br>
                       <h6>Additional Story Text (?)</h6>
                       <p class="addText pb-3"></p>
-                      <button type= "button" id="nextRound" class="btn btn-success btn-md nextRound d-none" href="#"> + </button>
+                      <button type= "button" id="nextRound" class="btn btn-success btn-md nextRound d-none" href="#" onclick="showEvidence()"> Next Round </button>
                     </div>
                 </div>
             </div>
